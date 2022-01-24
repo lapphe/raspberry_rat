@@ -1,2 +1,2 @@
-# pi_recording_basics
-Info on seting up and recording home cage videos
+# raspberry_rat
+Info on seting up and recording home cage videos for beginners
