@@ -61,7 +61,6 @@ except:
     os.rename(log_file, new_log_file)
     raise
 
-
 print("Beginning coversion to MP4")
 logging.info("Beginning coversion to MP4")
     
@@ -79,15 +78,13 @@ except subprocess.CalledProcessError as e:
 print("Coversion finished... Starting MP4 upload")
 logging.info("Conversion finished... Starting MP4 upload")
 
-#upload MP4 to UT Box
+#upload MP4 to cloud
 upload = "rclone move " + path2 + " " + rclone_config + " --contimeout=40m"
 os.system (upload)
 
 print("Removing H264 file")
 logging.info("Removing H264 file")
 
-
-#Delete H264 file to clear space on pi for next recording
 try:
     os.remove(path)
     print("H264 video moved to trash")
