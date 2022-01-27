@@ -53,7 +53,7 @@ try:
     camera.stop_preview()
     camera.stop_recording()
     print("Finished recording")
-    logging.info("Finished recording... Beginning coversion to MP4")
+
 except:
     logging.exception('Recording error found')
     new_log_file = '/home/pi/Documents/Logs/'+ 'FAILED_recording' + name + '.txt'
