@@ -1,13 +1,14 @@
 #Hannah Lapp
 #https://github.com/lapphe/raspberry_rat
 
-# This script will upload all video in the Videos folder to the specified cloud location
-#see rclone set up instructions
+# This script will upload all videos in the Videos folder to the specified cloud location
+# see rclone set up instructions
+
+rclone_config = 'your_rclone_here' #edit to specify your rclone configurated cloud storage location
 
 import os
 import subprocess
 
-os.system("rclone move /home/pi/Videos Cloud_location:directory/subdirectory --contimeout=4h")
+upload = "rclone move /home/pi/Videos " + rclone_config + " --contimeout=4h"
+os.system(upload)
 
-# replace Cloud_location:directory/subdirectory with the information you set up using rclone
-# e.g. Hannah_drive:recording_videos/day1
