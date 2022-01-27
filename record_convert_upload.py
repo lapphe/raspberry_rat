@@ -10,6 +10,7 @@ this_pi = 'XX' #Enter identifying info for recording here (e.g. subject ID). App
 brightness = 50 #integer between 1-100. 50 is usually a good place to start
 contrast = 50 #integer between 1-100. 50 is usually a good place to start
 recording_length = 5 #number of secs. 1 hour = 3600 secs, 5 minutes = 300 secs
+rclone_config = 'XXXX'
 #---------------------------------------------------------------------------------------------------
 
 from picamera import PiCamera
@@ -79,7 +80,7 @@ print("Coversion finished... Starting MP4 upload")
 logging.info("Conversion finished... Starting MP4 upload")
 
 #upload MP4 to UT Box
-upload = "rclone move " + path2 + " Box_folder:LBN_crossover_pilot/new_videos --contimeout=40m"
+upload = "rclone move " + path2 + " " + rclone_config + " --contimeout=40m"
 os.system (upload)
 
 print("Removing H264 file")
