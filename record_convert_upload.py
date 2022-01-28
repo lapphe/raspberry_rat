@@ -66,7 +66,7 @@ logging.info("Beginning coversion to MP4")
     
 #Covert file to MP4 format. Requires command line subprocess
 from subprocess import CalledProcessError
-command = "MP4Box -fps 30 -add {} {}".format(path, path2)
+command = "MP4Box -fps 25 -add {} {}".format(path, path2)
 try:
     output = subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
 except subprocess.CalledProcessError as e:
