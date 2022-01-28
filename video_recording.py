@@ -41,7 +41,7 @@ logging.info("Starting recording")
 
 try:
     camera.resolution=(1280,768) #change to lower resolution to reduce video file size
-    camera.framerate= 30
+    camera.framerate= 25
     camera.brightness= brightness
     camera.contrast= contrast
     camera.color_effects=(128,128) #comment this line out to record in color
