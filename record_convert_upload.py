@@ -100,17 +100,3 @@ vids_list = os.listdir('/home/pi/Videos/')
 vids = '\n'.join(vids_list)
 print("Remaining videos:" + vids)
 logging.info('Remaining videos:' + vids)
-
-
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
